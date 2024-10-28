@@ -38,7 +38,7 @@ template.innerHTML = `
         <div>
              <h3></h3>
              <div class="info">
-                <p>EMAIL</p>
+                <p><slot /></p>
                 <p>PHONE</p>
              </div>
              <button id="toggle-info">Hide Info</button>
