@@ -6,7 +6,7 @@ class UserCard extends HTMLElement {
     constructor(){
 
         super(); 
-        this.innerHTML = `${this.getAttribute('name')}`; 
+        this.innerHTML = `<h3>${this.getAttribute('name')}</h3>`; 
 
         // super() calls constructor of HTMLElement class
         // 'this' pertains to custom element
