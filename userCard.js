@@ -11,3 +11,7 @@ class UserCard extends HTMLElement {
     }
 
 }
+
+// Define Custom Element
+// Pass Tag name and Class
+window.customElements.define('user-card', UserCard);
