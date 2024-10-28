@@ -70,3 +70,9 @@
 - Include both HTML and CSS in templates
 - Use slots make template dynamic to add custom text to it
 
+
+# Creating <user-card> Web Component
+
+- The web component will have an avatar, user-image, name, phone, & email.
+- It will also have a button to show & hide phone & email.
+
