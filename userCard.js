@@ -55,6 +55,9 @@ class UserCard extends HTMLElement {
 
         super(); 
 
+        
+        this.showInfo = true;
+
         // Creating Shadow DOM
         this.attachShadow({ mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -83,6 +86,43 @@ class UserCard extends HTMLElement {
     toggleInfo() {
 
         console.log('Button clicked!');
+
+        // Set showInfo
+        // To True when it's False & 
+        // To False when it's True
+        this.showInfo = !this.showInfo;
+
+        // Define Shadow DOM Elements
+        const info = this.shadowRoot.querySelector('.info');
+        const button = this.shadowRoot.querySelector('#toggle-info');
+
+
+        // Hide Info & Change button text
+        if(this.showInfo){
+
+            // Show Info
+            info.style.display = 'block';
+            // Set button text
+            button.innerText = 'Hide Info';
+
+        } else {
+
+            // Hide Info
+            info.style.display = 'none';
+            button.innerText = 'Show Info';
+
+        }
+
+      
+
+    }
+
+    // Removing Event Listener using 
+    // disconnectedCallback() Life Cycle method
+    disconnectedCallback(){
+
+        this.shadowRoot.querySelector('#toggle-info').
+        removeEventListener();
 
     }
 
