@@ -70,13 +70,19 @@ class UserCard extends HTMLElement {
     }
 
     // Adding Event Listener to Button inside shadowRoot
-    
+
     connectedCallback(){
 
         // Put Event Listener inside 
         // connectedCallback() Life Cycle method
         this.shadowRoot.querySelector('#toggle-info').
             addEventListener('click', () => this.toggleInfo());
+
+    }
+
+    toggleInfo() {
+
+        console.log('Button clicked!');
 
     }
 
