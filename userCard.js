@@ -67,14 +67,16 @@ class UserCard extends HTMLElement {
         // Set image src to value(url) of avatar attribute 
         this.shadowRoot.querySelector('img').src = 
             this.getAttribute('avatar');
+    }
 
+    // Adding Event Listener to Button inside shadowRoot
+    
+    connectedCallback(){
 
-        /*  this.innerHTML = `<style> h3 { color: coral; }</style><h3>${this.getAttribute('name')}</h3>`; 
-        */
-        // super() calls constructor of HTMLElement class
-        // 'this' pertains to custom element
-        // Set Tag's innerHTML text to value of name attribute
-            // <user-card name="John Does">John Does</user-card>
+        // Put Event Listener inside 
+        // connectedCallback() Life Cycle method
+        this.shadowRoot.querySelector('#toggle-info').
+            addEventListener('click', () => this.toggleInfo());
 
     }
 
