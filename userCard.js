@@ -4,18 +4,17 @@
 // Define Template Element for Shadow DOM
 const template = document.createElement('template');
 
-// Add Content to Template
+// Add Style & Tags to Template
 template.innerHTML = `
 
     <style>
-        h3 {
-
-             color: coral;
-        
-        }
+        h3 { color: coral;}
     </style>
     <div class="user-card">
-        <h3></h3>
+        <img />
+        <div>
+             <h3></h3>
+        </div>
     </div>
 `;
 
@@ -36,6 +35,10 @@ class UserCard extends HTMLElement {
         // Set h3 text to name attribute value
         this.shadowRoot.querySelector('h3').innerText = 
             this.getAttribute('name');
+
+        // Set image src to value(url) of avatar attribute 
+        this.shadowRoot.querySelector('img').src = 
+            this.getAttribute('avatar');
 
 
         /*  this.innerHTML = `<style> h3 { color: coral; }</style><h3>${this.getAttribute('name')}</h3>`; 
